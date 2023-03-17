@@ -1,10 +1,11 @@
-
+import java.util.Date;
 
 public class Student{
 
     String name; //properties or fields -> store data
     String surname;
     String number;
+    Date dateOfBirth;
     
     //a method with no paramaters  named as sayHello. 
     void sayHello (){
@@ -21,6 +22,11 @@ public class Student{
         }  
     }
 
-    
+    void sayAge(){ //create a method prints out the age of student in system output
+
+    }
+
+
+
 
 }
