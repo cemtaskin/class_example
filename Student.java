@@ -1,8 +1,6 @@
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.Period;
-import java.time.ZoneId;
-import java.util.Date;
+
 
 public class Student{
 
@@ -10,7 +8,20 @@ public class Student{
     String surname;
     String number;
     LocalDate dateOfBirth;
+
+     
+    public Student(){ //this is constructor method with no params. Zero paramter constructor method is called as default constructor
+        System.out.println("Def constructor is triggered automatically");
+    }
     
+    public Student(String name, String surname, String number, LocalDate dateOfBirth) {
+        this.name = name;
+        this.surname = surname;
+        this.number = number;
+        this.dateOfBirth = dateOfBirth;
+    }
+
+
     //a method with no paramaters  named as sayHello. 
     void sayHello (){
         System.out.println(String.format("Hi my name is %s. My Surname is %s and my number is %s",name,surname,number));
