@@ -1,3 +1,7 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
+import java.time.ZoneId;
 import java.util.Date;
 
 public class Student{
@@ -5,7 +9,7 @@ public class Student{
     String name; //properties or fields -> store data
     String surname;
     String number;
-    Date dateOfBirth;
+    LocalDate dateOfBirth;
     
     //a method with no paramaters  named as sayHello. 
     void sayHello (){
@@ -23,7 +27,8 @@ public class Student{
     }
 
     void sayAge(){ //create a method prints out the age of student in system output
-
+        int years=  Period.between(dateOfBirth, LocalDate.now()).getYears();
+        System.out.println(String.format("My age is %d",years));
     }
 
 
